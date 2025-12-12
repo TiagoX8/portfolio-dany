@@ -1,0 +1,109 @@
+
+#projects {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  .project-wrapper {
+    margin-bottom: 15rem;
+  }
+  .project-wrapper-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .project-wrapper-2x2 .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 900px) {
+    .project-wrapper-2x2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__text {
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+    @include respond(phone) {
+      margin-bottom: 2.5rem !important;
+    }
+    @include respond(tab-land) {
+      margin-bottom: 4.8rem;
+    }
+    &-title {
+      font-weight: bold;
+      margin-bottom: 1.8rem;
+      font-size: $mid-font-size;
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+    & p > a {
+      color: $secondary-color;
+    }
+  }
+  &__image {
+    width: 90%;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      width: 100%;
+      margin: 0;
+    }
+    & .thumbnail {
+      border: none;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+      /* Removido qualquer transição de transform para evitar aumento */
+      transition: box-shadow 0.2s ease-out;
+      @include respond(phone) {
+        border: 1px solid $light-grey;
+        box-shadow: none;
+        margin-bottom: 3.2rem;
+      }
+    }
+    /* Garante que o tilt não aumente o vídeo */
+    & .thumbnail,
+    & .thumbnail.js-tilt,
+    & .thumbnail.js-tilt:hover,
+    & .thumbnail.js-tilt:focus {
+      transform: none !important;
+      -webkit-transform: none !important;
+    }
+  }
+
+  // Estilos para vídeos nos projetos
+  .video-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 260px;
+    min-width: 180px;
+    min-height: 340px;
+    margin: 0 auto;
+  }
+  .video-project {
+    height: 340px !important;
+    width: 200px !important;
+    min-width: 200px !important;
+    min-height: 340px !important;
+    max-width: 200px !important;
+    max-height: 340px !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #000 !important;
+    display: block;
+    /* Remove object-fit para vídeos problemáticos */
+  }
+}
