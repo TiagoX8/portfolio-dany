@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npx parcel build",
+  "outputDirectory": "dist",
+  "devCommand": "npx parcel",
+  "installCommand": "npm install"
+}
