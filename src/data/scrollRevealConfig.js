@@ -30,6 +30,14 @@ export const targetElements = [
     },
   },
   {
+    element: ".hero-kitty",
+    animation: {
+      delay: 500,
+      distance: "100px",
+      origin: "top",
+    },
+  },
+  {
     element: ".about-wrapper__image",
     animation: {
       delay: 600,

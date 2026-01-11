@@ -1,8 +1,8 @@
 
 #projects {
-  background-color: $white-color;
-  color: $dark-blue-text;
-  margin-top: -10rem;
+  background-color: #272341;
+  color: $white-color;
+  margin-top: -15rem;
   padding-top: 15rem;
 
   @include respond(tab-land) {
@@ -81,27 +81,27 @@
 
   // Estilos para vídeos nos projetos
   .video-card {
-    background: #fff;
+    background: transparent;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    padding: 1rem;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 260px;
-    min-width: 180px;
-    min-height: 340px;
+    max-width: 88%;
+    min-width: 88%;
+    min-height: 88%;
     margin: 0 auto;
   }
   .video-project {
-    height: 340px !important;
-    width: 200px !important;
-    min-width: 200px !important;
-    min-height: 340px !important;
-    max-width: 200px !important;
-    max-height: 340px !important;
+    height: 88% !important;
+    width: 88% !important;
+    min-width: 88% !important;
+    min-height: 88% !important;
+    max-width: 88% !important;
+    max-height: 88% !important;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: none;
     background: #000 !important;
     display: block;
     /* Remove object-fit para vídeos problemáticos */

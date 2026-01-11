@@ -36,6 +36,30 @@
 
     <!-- Todo: remove the below script once you finish your portfolio -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+      .hero-kitty {
+        display: inline-block;
+        transition: left 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55), 
+                    right 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                    transform 0.25s ease;
+        cursor: default; /* cursor dinâmico via JS somente sobre pixels visíveis */
+      }
+      .hero-kitty.moving {
+        transform: translateY(-8px);
+      }
+      @keyframes kitty-enter-down {
+        from { transform: translateY(-100px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      .hero-kitty.enter-onload {
+        animation: kitty-enter-down 0.8s ease-out both;
+        will-change: transform, opacity;
+      }
+      .hero-kitty.enter-switch {
+        animation: kitty-enter-down 0.5s ease-out both;
+        will-change: transform, opacity;
+      }
+    </style>
   </head>
 
   <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
@@ -44,14 +68,18 @@
 
     <!-- **** Hero Section **** -->
     <section id="hero" class="jumbotron">
+      <img class="hero-kitty load-hidden" src="assets/gatinho_cima.png" alt="Gatinho" style="position: absolute; right: 20px; top: 0px; width: 150px; height: auto; z-index: 10;" />
       <div class="container">
         <h1 class="hero-title load-hidden">
-          Oi, Eu sou a <span class="text-color-main">Dany</span>
+          Olá, me chamo <span class="text-color-main">Dany,</span>
           <br />
-          Sou uma profissinal de Marketing.
+          estudante de marketing na USP
         </h1>
         <p class="hero-cta">
-          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Saiba mais</a>
+          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            Saiba mais
+            <img src="assets/icon_seta_direita.png" alt="" style="width: 2rem; height: 2rem; transform: translate(3px, 1px);" />
+          </a>
         </p>
       </div>
     </section>
@@ -86,14 +114,25 @@
                 <br />
                 Estou Buscando estágio em Marketing com foco em <strong>estratégias digitais, criação de conteúdo</strong> e <strong>análise de desempenho</strong>.
               </p>
-              <span class="d-flex mt-3">
+              <span class="d-flex mt-3" style="gap: 1rem;">
                 <a
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--resume"
                   href="assets/Dany.pdf"
+                  style="display: flex; align-items: center; gap: 0.5rem;"
                 >
+                  <img src="assets/icon_curriculo.png" alt="Currículo" style="width:2.6rem; height:2.6rem; vertical-align:middle; margin-right:0.3rem;" />
                   Currículo
+                </a>
+                <a
+                  rel="noreferrer"
+                  class="cta-btn cta-btn--resume"
+                  href="#projects"
+                  style="display: flex; align-items: center; gap: 0.5rem;"
+                >
+                  <img src="assets/icon_projetos.png" alt="Projetos" style="width:2.6rem; height:2.6rem; vertical-align:middle; margin-right:0.3rem;" />
+                  Meus projetos
                 </a>
               </span>
             </div>
@@ -108,31 +147,41 @@
       <section id="projects">
         <div class="container">
           <div class="project-wrapper">
-            <h2 class="section-title dark-blue-text">Projetos</h2>
+            <h2 class="section-title" style="color: white;">Projetos</h2>
             <div class="project-wrapper-2x2">
           <!-- Notice: each .row is a project -->
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Vídeo Institucional</h3>
+                <h3 class="project-wrapper__text-title"><strong>Divulgação de Evento</strong></h3>
                 <div>
                   <p class="mb-4">
-                    Vídeo promocional para instituição.
+                    Vídeo promocional para divulgação do DJ.
                   </p>
                 </div>
                 <a
                   rel="noreferrer"
                   target="_blank"
                   class="cta-btn cta-btn--hero"
-                  href="#!"
+                  href="https://www.instagram.com/reel/DOqvHEjjSPw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                  style="display: block; margin-bottom: 0.8rem;"
                 >
                   Ver Mais
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="assets/metricas_dj.pdf"
+                  style="display: block;"
+                >
+                  Métricas
                 </a>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
               <div class="project-wrapper__image load-hidden">
-                <a rel="noreferrer" href="#!" target="_blank">
+                <a rel="noreferrer" href="https://www.instagram.com/reel/DOqvHEjjSPw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
                   <div
                     data-tilt
                     data-tilt-max="4"
@@ -162,20 +211,12 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Vídeo 2</h3>
+                <h3 class="project-wrapper__text-title"><strong>Trend</strong></h3>
                 <div>
                   <p class="mb-4">
-                    Segundo vídeo do projeto.
+                    Save the date.
                   </p>
                 </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  Ver Mais
-                </a>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
@@ -210,20 +251,12 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
               <div class="project-wrapper__text load-hidden">
-                <h3 class="project-wrapper__text-title">Vídeo 3</h3>
+                <h3 class="project-wrapper__text-title"><strong>Trend</strong></h3>
                 <div>
                   <p class="mb-4">
-                    Terceiro vídeo do projeto.
+                    Save the date.
                   </p>
                 </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  Ver Mais
-                </a>
               </div>
             </div>
             <div class="col-lg-8 col-sm-12">
@@ -253,6 +286,114 @@
             </div>
           </div>
           <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title"><strong>FAQ</strong></h3>
+                <div>
+                  <p class="mb-4">
+                    Documento com perguntas frequentes.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="assets/faq.pdf"
+                  style="display: block; margin-bottom: 0.8rem;"
+                >
+                  Ver Mais
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="assets/metricas-faq.pdf"
+                  style="display: block;"
+                >
+                  Métricas
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <div
+                  data-tilt
+                  data-tilt-max="4"
+                  data-tilt-glare="true"
+                  data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt"
+                  style="height: 500px;"
+                >
+                  <div class="video-card" style="height: 100%;">
+                    <iframe
+                      src="assets/faq.pdf#toolbar=0"
+                      width="100%"
+                      height="100%"
+                      style="border: none; border-radius: 8px;"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title"><strong>Certificado de Presença</strong></h3>
+                <div>
+                  <p class="mb-4">
+                    Certificado de presença de evento de Marketing.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="assets/CERTIFICADO_MKT.pdf"
+                  style="display: block; margin-bottom: 0.8rem;"
+                >
+                  Ver Mais
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="assets/metricas_certificado.pdf"
+                  style="display: block;"
+                >
+                  Métricas
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="assets/CERTIFICADO_MKT.pdf" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <div class="video-card">
+                      <img
+                        src="assets/CERTIFICADO_MKT.jpg"
+                        alt="Certificado de Presença"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"
+                      />
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
           </div>
     <!-- /END Projects Section -->
       </section>
@@ -269,23 +410,31 @@
               </span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 1.35rem;">
-              <img src="assets/whatsapp.png" alt="WhatsApp" style="width:2.1rem; height:2.1rem; vertical-align:middle;" />
-              <span id="contact-whatsapp" style="font-size:1.6rem;"><b>(11) 99947-8900</b></span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 0.7rem; font-size: 1.35rem;">
               <img src="assets/adress.png" alt="Endereço" style="width:2.1rem; height:2.1rem; vertical-align:middle;" />
               <span id="contact-address" style="font-size:1.6rem;"><b>Cotia, SP, Brasil</b></span>
             </div>
-            <a
-              rel="noreferrer"
-              target="_blank"
-              class="cta-btn cta-btn--resume"
-              href="https://www.linkedin.com/in/daniely-gomes-santana-b61980353/"
-              style="margin-top:1.5rem;align-self:center; display: flex; align-items: center; gap: 0.5rem;"
-            >
-              <img src="assets/linkedin.png" alt="LinkedIn" style="width:2.2rem; height:2.2rem; vertical-align:middle; margin-right:0.3rem;" />
-              Linkedin
-            </a>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; align-self: center;">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                class="cta-btn cta-btn--resume"
+                href="https://www.linkedin.com/in/danielymkt"
+                style="display: flex; align-items: center; gap: 0.5rem;"
+              >
+                <img src="assets/linkedin.png" alt="LinkedIn" style="width:2.2rem; height:2.2rem; vertical-align:middle; margin-right:0.3rem;" />
+                Linkedin
+              </a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                class="cta-btn cta-btn--resume"
+                href="assets/Dany.pdf"
+                style="display: flex; align-items: center; gap: 0.5rem;"
+              >
+                <img src="assets/icon_curriculo.png" alt="Currículo" style="width:2.6rem; height:2.6rem; vertical-align:middle; margin-right:0.3rem;" />
+                Currículo
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -310,9 +459,13 @@
           </a>
         </div>
 
-        <hr />
+        <div style="display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+          <img src="assets/gato_footer.png" alt="Gato Footer" style="width: 70px; height: auto;" />
+        </div>
 
-        <p class="footer__text" style="text-align:center; margin-bottom:0;">
+        <hr style="margin-top: -3.2rem;" />
+
+        <p class="footer__text" style="text-align:center; margin-bottom:1rem;">
           Portfólio Daniely Gomes
         </p>
       </div>
