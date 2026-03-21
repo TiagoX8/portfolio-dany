@@ -597,16 +597,28 @@
   </style>
 </head>
 
- <script>
-      document.querySelectorAll('video[data-autoplay]').forEach(function(v) {
-        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-          v.muted = true;
-          v.autoplay = true;
-          v.loop = true;
-          v.play().catch(function(){});
-        }
-      });
-    </script>
+Aqui, sem enrolação:
+HTML:
+html<video src="assets/videos/Insta.mp4" playsinline controls data-autoplay></video>
+<video src="assets/videos/projeto.mp4" playsinline controls data-autoplay></video>
+<video src="assets/videos/projetob.mp4" playsinline controls data-autoplay></video>
+Script:
+html<script>
+  var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  document.querySelectorAll('video[data-autoplay]').forEach(function(v) {
+    if (isDesktop) {
+      v.preload = 'auto';
+      v.muted = true;
+      v.loop = true;
+      v.load();
+      v.addEventListener('canplay', function() {
+        v.play().catch(function(){});
+      }, { once: true });
+    } else {
+      v.preload = 'none';
+    }
+  });
+</script>
 
 <body>
 
@@ -699,7 +711,7 @@
       <!-- Featured: Divulgação DJ -->
       <div class="project-card">
         <div class="project-media">
-          <video src="assets/videos/Insta.mp4" playsinline preload="metadata" controls data-autoplay></video>
+          <video src="assets/videos/Insta.mp4" playsinline controls data-autoplay></video>
           <span class="project-type-badge">Vídeo · Redes Sociais</span>
         </div>
         <div class="project-body">
@@ -715,7 +727,7 @@
       <!-- Trend A -->
       <div class="project-card">
         <div class="project-media">
-          <video src="assets/videos/projeto.mp4" playsinline preload="metadata" controls data-autoplay></video>
+         <video src="assets/videos/projeto.mp4" playsinline controls data-autoplay></video>
           <span class="project-type-badge">Motion · Trend</span>
         </div>
         <div class="project-body">
@@ -730,7 +742,7 @@
       <!-- Trend B -->
       <div class="project-card">
         <div class="project-media">
-         <video src="assets/videos/projetob.mp4" playsinline preload="metadata" controls data-autoplay></video>
+         <video src="assets/videos/projetob.mp4" playsinline controls data-autoplay></video>
           <span class="project-type-badge">Motion · Trend</span>
         </div>
         <div class="project-body">
