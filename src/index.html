@@ -596,6 +596,21 @@
     }
   </style>
 </head>
+
+<script>
+  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent)
+    || ('ontouchstart' in window && navigator.maxTouchPoints > 1);
+
+  document.querySelectorAll('video[data-desktop-autoplay]').forEach(function(video) {
+    if (!isMobile) {
+      video.setAttribute('autoplay', '');
+      video.setAttribute('muted', '');
+      video.setAttribute('loop', '');
+      video.setAttribute('preload', 'auto');
+      video.play().catch(function() {});
+    }
+  });
+</script>
 <body>
 
   <nav>
@@ -687,7 +702,7 @@
       <!-- Featured: Divulgação DJ -->
       <div class="project-card">
         <div class="project-media">
-          <video src="assets/videos/Insta.mp4" playsinline controls preload="none"></video>
+          <video src="assets/videos/Insta.mp4" playsinline autoplay muted loop preload="auto" controls></video>
           <span class="project-type-badge">Vídeo · Redes Sociais</span>
         </div>
         <div class="project-body">
@@ -703,7 +718,7 @@
       <!-- Trend A -->
       <div class="project-card">
         <div class="project-media">
-          <video src="assets/videos/projeto.mp4" playsinline controls preload="none"></video>
+          <video src="assets/videos/projeto.mp4" playsinline autoplay muted loop preload="auto" controls></video>
           <span class="project-type-badge">Motion · Trend</span>
         </div>
         <div class="project-body">
@@ -718,7 +733,7 @@
       <!-- Trend B -->
       <div class="project-card">
         <div class="project-media">
-          <video src="assets/videos/projetob.mp4" playsinline controls preload="none"></video>
+          <video src="assets/videos/projetob.mp4" playsinline autoplay muted loop preload="auto" controls></video>
           <span class="project-type-badge">Motion · Trend</span>
         </div>
         <div class="project-body">
