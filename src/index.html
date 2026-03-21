@@ -597,13 +597,7 @@
   </style>
 </head>
 
-Aqui, sem enrolação:
-HTML:
-html<video src="assets/videos/Insta.mp4" playsinline controls data-autoplay></video>
-<video src="assets/videos/projeto.mp4" playsinline controls data-autoplay></video>
-<video src="assets/videos/projetob.mp4" playsinline controls data-autoplay></video>
-Script:
-html<script>
+<script>
   var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   document.querySelectorAll('video[data-autoplay]').forEach(function(v) {
     if (isDesktop) {
