@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniely Gomes — Marketing</title>
+  <title>Daniely Gomes Santana — Marketing</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,7 +13,7 @@
       --warm-white: #FDFAF5;
       --ink: #1A1612;
       --ink-light: #4A4540;
-      --terracotta: #C4572A;
+      --terracotta: #5d0000;
       --terracotta-light: #E8795A;
       --sage: #6B8A6E;
       --gold: #C9952A;
@@ -150,7 +150,7 @@
       border-radius: 2px;
       transition: background 0.2s, transform 0.15s;
     }
-    .btn-primary:hover { background: #a84520; transform: translateY(-1px); }
+    .btn-primary:hover { background: #a82020; transform: translateY(-1px); }
 
     .btn-secondary {
       display: inline-flex;
@@ -475,7 +475,11 @@
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
       align-items: center;
-      padding: 6rem 5rem;
+      padding: 6rem 8rem;
+    }
+
+    .contact-left {
+      margin-right: 1rem;
     }
 
     .contact-left h2 {
@@ -585,7 +589,8 @@
       .projects-grid { grid-template-columns: 1fr; }
       .project-card.featured { grid-column: span 1; }
 
-      #contact { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 1.5rem; }
+      #contact { grid-template-columns: 1fr; gap: 2.5rem; padding: 4rem 2rem; }
+      .contact-left { margin-right: 0; }
 
       footer { padding: 1.5rem; flex-direction: column; gap: 0.75rem; text-align: center; }
     }
@@ -594,7 +599,7 @@
 <body>
 
   <nav>
-    <span class="nav-logo">Daniely Gomes</span>
+    <span class="nav-logo">Daniely Gomes Santana</span>
     <ul class="nav-links">
       <li><a href="#about">Sobre</a></li>
       <li><a href="#projects">Projetos</a></li>
@@ -609,7 +614,7 @@
       <span class="hero-tag">Marketing · USP · São Paulo</span>
       <h1>Criando<br>estratégias que<br><em>conectam</em></h1>
       <p class="hero-desc">
-        Estudante de Marketing na USP, Diretora de Comunicação do DAMA — apaixonada por estratégias digitais, criação de conteúdo e análise de desempenho.
+        Estudante de Marketing na USP, Diretora de Comunicação do DAMA, apaixonada por estratégias digitais, criação de conteúdo e análise de desempenho.
       </p>
       <div class="hero-ctas">
         <a href="#projects" class="btn-primary">Ver projetos</a>
@@ -649,11 +654,11 @@
           <p class="hero-badge-text">DAMA USP</p>
         </div>
         <div class="about-img-accent"></div>
-        <img src="assets/profile.png" alt="Daniely Gomes" />
+        <img src="assets/upload_Dany.jpg.png" alt="Daniely Gomes Santana" />
       </div>
       <div class="about-content">
-        <h2>Olá, sou<br><em>Daniely Gomes</em></h2>
-        <p>19 anos, cursando o <strong>3º semestre de Marketing</strong> na Universidade de São Paulo (USP) — uma das mais conceituadas do país.</p>
+        <h2>Olá, sou<br><em>Daniely Gomes Santana</em></h2>
+        <p>19 anos, cursando o <strong>3º semestre de Marketing</strong> na Universidade de São Paulo (USP), uma das mais conceituadas do país.</p>
         <p>Atualmente sou <strong>Diretora de Comunicação</strong> do DAMA (Diretório Acadêmico de Marketing da USP), onde coordeno a presença digital e campanhas institucionais do diretório.</p>
         <p>Busco estágio em Marketing com foco em <strong>estratégias digitais</strong>, criação de conteúdo e análise de desempenho.</p>
         <div class="about-chips">
@@ -687,7 +692,7 @@
         </div>
         <div class="project-body">
           <h3>Divulgação de Evento</h3>
-          <p>Vídeo promocional para divulgação de DJ — produção, roteiro e edição para Instagram Reels.</p>
+          <p>Vídeo promocional para divulgação de DJ, produção, roteiro e edição para Instagram Reels.</p>
           <div class="project-links">
             <a href="https://www.instagram.com/reel/DOqvHEjjSPw/" target="_blank" class="project-link">Ver no Instagram →</a>
             <a href="assets/metricas_dj.pdf" target="_blank" class="project-link muted">Métricas →</a>
@@ -727,17 +732,12 @@
 
       <!-- FAQ -->
       <div class="project-card">
-        <div class="project-media" style="background: #2a2218;">
-          <div class="project-media-placeholder">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <rect x="8" y="8" width="32" height="38" rx="2" stroke="white" stroke-width="1.5"/>
-              <line x1="15" y1="18" x2="33" y2="18" stroke="white" stroke-width="1.5"/>
-              <line x1="15" y1="24" x2="33" y2="24" stroke="white" stroke-width="1.5"/>
-              <line x1="15" y1="30" x2="25" y2="30" stroke="white" stroke-width="1.5"/>
-            </svg>
+        <a href="assets/faq.pdf" target="_blank" style="text-decoration: none; color: inherit;">
+          <div class="project-media">
+            <embed src="assets/faq.pdf#page=1" type="application/pdf" style="width: 100%; height: 100%;" />
+            <span class="project-type-badge">Documento</span>
           </div>
-          <span class="project-type-badge">Documento</span>
-        </div>
+        </a>
         <div class="project-body">
           <h3>FAQ Institucional</h3>
           <p>Documento com perguntas frequentes para comunicação institucional do DAMA.</p>
@@ -768,7 +768,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" style="padding: 0;">
+  <section id="contact">
     <div class="contact-left">
       <p class="section-label" style="margin-bottom: 1.5rem;">Contato</p>
       <h2>Vamos<br><em>conversar?</em></h2>
@@ -823,7 +823,7 @@
   </section>
 
   <footer>
-    <span class="footer-logo">Daniely Gomes</span>
+    <span class="footer-logo">Daniely Gomes Santana</span>
     <p>© 2026 — Portfólio de Marketing</p>
     <p style="opacity: 0.5;">São Paulo, Brasil</p>
   </footer>
