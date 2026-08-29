@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tiagox8.github.io/portfolio-dany/sitemap.xml
